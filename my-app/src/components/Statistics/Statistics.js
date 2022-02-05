@@ -1,10 +1,9 @@
 import React from "react"
-
 import s from './Statistics.module.css';
 
 const Statistics = ({good,neutral,bad,total,positivePersent}) => {
 return(
-  <ul>Statistics
+  <ul>
   
     <li className={s.name}>Good:{good}</li>
     <li>Neutral:{neutral}</li>
