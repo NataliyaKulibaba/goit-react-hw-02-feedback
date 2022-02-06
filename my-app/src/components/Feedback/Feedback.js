@@ -35,7 +35,7 @@ class Feedback extends Component {
         <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
 
         <Section title="Statistics">
-          {this.state.good || this.state.neutral || this.state.bad ? (
+          {this.countTotalFeedback() ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
