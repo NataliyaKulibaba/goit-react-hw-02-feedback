@@ -12,8 +12,9 @@ class Feedback extends Component {
   };
 
   onLeaveFeedback = e => {
+    const { name } = e.target;
     this.setState(prev => {
-      return { [e.target.name]: (prev[e.target.name] += 1) };
+      return { [name]: (prev[name] += 1) };
     });
   };
 
