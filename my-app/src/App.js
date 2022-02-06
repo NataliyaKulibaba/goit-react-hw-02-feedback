@@ -1,16 +1,13 @@
-import Feedback from "./components/Feedback"
-import Section from "./components/Section"
+import Feedback from './components/Feedback';
+import Section from './components/Section/Section';
 import './App.css';
 
 function App() {
   return (
     <>
-      <Section title='Please leave feedback'>
-      <Feedback/>
+      <Section title="Please leave feedback">
+        <Feedback />
       </Section>
-      
-  
-     
     </>
   );
 }
