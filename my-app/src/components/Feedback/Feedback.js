@@ -33,7 +33,10 @@ class Feedback extends Component {
   render() {
     return (
       <>
-        <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+        <FeedbackOptions
+          options={['good', 'neutral', 'bad']}
+          onLeaveFeedback={this.onLeaveFeedback}
+        />
 
         <Section title="Statistics">
           {this.countTotalFeedback() ? (

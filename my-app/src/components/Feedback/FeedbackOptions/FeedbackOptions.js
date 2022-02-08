@@ -1,36 +1,23 @@
 import React from 'react';
 import s from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  console.log(options);
   return (
-    <>
-      <button
-        type="button"
-        name="good"
-        className={s.btn}
-        onClick={onLeaveFeedback}
-      >
-        Good
-      </button>
-
-      <button
-        type="button"
-        name="neutral"
-        className={s.btn}
-        onClick={onLeaveFeedback}
-      >
-        Neutral
-      </button>
-
-      <button
-        type="button"
-        name="bad"
-        className={s.btn}
-        onClick={onLeaveFeedback}
-      >
-        Bad
-      </button>
-    </>
+    <ul className={s.btnList}>
+      {options.map(item => (
+        <li key={item}>
+          <button
+            type="button"
+            name={item}
+            className={s.btn}
+            onClick={onLeaveFeedback}
+          >
+            {item}
+          </button>
+        </li>
+      ))}
+    </ul>
   );
 };
 

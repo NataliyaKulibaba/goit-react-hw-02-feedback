@@ -16,3 +16,7 @@
   transform: scale(1.05);
   background-color: rgb(17, 92, 117);
 }
+
+.btnList {
+  display: flex;
+}
